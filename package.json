@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "lodash.samplesize": "^4.2.0"
   },
   "author": "",
