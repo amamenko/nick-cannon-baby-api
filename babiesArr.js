@@ -10,6 +10,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 30,
     current_child_with_mother: 1,
     total_children_with_mother: 2,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Moroccan Cannon",
@@ -22,6 +26,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 30,
     current_child_with_mother: 2,
     total_children_with_mother: 2,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Golden 'Sagon' Cannon",
@@ -34,6 +42,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 36,
     current_child_with_mother: 1,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Powerful Queen Cannon",
@@ -46,6 +58,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 40,
     current_child_with_mother: 2,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Zillion Mixolydian Cannon",
@@ -58,6 +74,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 40,
     current_child_with_mother: 1,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Zillion Heir Cannon",
@@ -70,6 +90,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 40,
     current_child_with_mother: 2,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Zen Scott Cannon",
@@ -82,6 +106,15 @@ const babiesArr = [
     nick_cannon_age_at_birth: 40,
     current_child_with_mother: 1,
     total_children_with_mother: 2,
+    status: {
+      alive: false,
+      date_of_passing: "12/05/2021",
+      age: {
+        years: 0,
+        months: 5,
+        days: 13,
+      },
+    },
   },
   {
     name: "Legendary Love Cannon",
@@ -94,6 +127,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 41,
     current_child_with_mother: 1,
     total_children_with_mother: 1,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Onyx Ice Cole Cannon",
@@ -106,6 +143,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 41,
     current_child_with_mother: 1,
     total_children_with_mother: 1,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Rise Messiah Cannon",
@@ -118,6 +159,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 41,
     current_child_with_mother: 3,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Beautiful Zeppelin Cannon",
@@ -130,6 +175,10 @@ const babiesArr = [
     nick_cannon_age_at_birth: 42,
     current_child_with_mother: 3,
     total_children_with_mother: 3,
+    status: {
+      alive: true,
+      age: {},
+    },
   },
   {
     name: "Baby Cannon",
@@ -142,6 +191,14 @@ const babiesArr = [
     nick_cannon_age_at_birth: 42,
     current_child_with_mother: 2,
     total_children_with_mother: 2,
+    status: {
+      alive: false,
+      age: {
+        years: 0,
+        months: 0,
+        days: 0,
+      },
+    },
   },
 ];
 

@@ -5,9 +5,11 @@ const { babiesArr } = require("./babiesArr");
 const {
   getUniqueValuesFromArr,
 } = require("./functions/getUniqueValuesFromArr");
-const { parse, isWithinInterval } = require("date-fns");
+const { isWithinInterval } = require("date-fns");
 const enforce = require("express-sslify");
 const cors = require("cors");
+const { setAgeOnHash } = require("./functions/setAgeOnHash");
+const { parseDate } = require("./functions/parseDate");
 require("dotenv").config();
 
 const port = process.env.PORT || 4000;
@@ -20,8 +22,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("/babies/random", (req, res) => {
-  const parseDate = (date) => parse(date, "MM/dd/yyyy", new Date());
-
   // Parameters
   const numResults = Number(req.query.results);
   const mother = req.query.mother;
@@ -76,8 +76,51 @@ app.get("/babies/random", (req, res) => {
       babiesCopyArr = babiesCopyArr.filter((baby) => baby.gender === "female");
   }
 
+  babiesCopyArr = setAgeOnHash(babiesCopyArr);
+
   const babyResults = sampleSize(babiesCopyArr, numResults || 1);
   res.send(babyResults);
+});
+
+app.get("/babies/ordered/:index?", (req, res) => {
+  if (req.params.index) {
+    if (Number(req.params.index) || req.params.index === "0") {
+      if (babiesArr[Number(req.params.index)]) {
+        let resultArr = [babiesArr[Number(req.params.index)]];
+        resultArr = setAgeOnHash(resultArr);
+        res.send(resultArr);
+      } else {
+        res.send([]);
+      }
+    } else {
+      const digitDashRegex = /^\d{1,2}-+\d{1,2}/gm;
+      if (digitDashRegex.test(req.params.index)) {
+        const splitIndeces = req.params.index.split("-");
+        const firstNum = Number(splitIndeces[0]);
+        const secondNum = Number(splitIndeces[1]);
+        if ((firstNum || firstNum === 0) && (secondNum || secondNum === 0)) {
+          let result = babiesArr.slice(firstNum, secondNum + 1);
+          result = setAgeOnHash(result);
+          res.send(result);
+        } else {
+          res
+            .status(400)
+            .send(
+              "400 Bad Request: Index should be a number or a range between two numbers"
+            );
+        }
+      } else {
+        res
+          .status(400)
+          .send(
+            "400 Bad Request: Index should be a number or a range between two numbers"
+          );
+      }
+    }
+  } else {
+    res.redirect("/babies/ordered/0");
+  }
+  return;
 });
 
 app.get("/babies/mothers", (req, res) => {
