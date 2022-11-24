@@ -1,0 +1,87 @@
+.main_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main_wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+a {
+  color: #ffe4f0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+a.github-fork-ribbon {
+  border-bottom: none;
+}
+
+a.pink_link {
+  border-bottom: 1px solid #ffe4f0;
+}
+
+.api_logo {
+  max-width: 375px;
+}
+
+.explanation_paragraphs {
+  margin-top: -1rem;
+}
+
+.paragraph {
+  margin-top: 2rem;
+}
+
+.read_more {
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.contact {
+  border-top: 1px solid #fff;
+  margin: 3rem 0rem 2rem 0rem;
+  padding-top: 2rem;
+}
+
+.disclaimer {
+  margin: 2rem 0;
+}
+
+.support_container {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0 5rem 0;
+}
+
+.bottom_icons a {
+  border-bottom: none;
+}
+
+.example_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
+}
