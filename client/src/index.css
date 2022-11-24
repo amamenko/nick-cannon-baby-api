@@ -14,7 +14,7 @@ body {
 }
 
 pre {
-  background: #fff;
+  background: rgb(25, 25, 25);
   border: 1px solid #d8d8d8;
   display: block;
   font-size: 13px;
@@ -32,13 +32,14 @@ code {
 }
 
 code a {
-  color: #000;
+  color: #fff;
   font: 16px/1.5 "Courier New", Arial, sans-serif;
   font-weight: 500;
+  border-bottom: 1px solid #fff;
 }
 
 code.request.get:before {
-  color: #1068b3;
+  color: #a4d1f7;
   content: "GET ";
 }
 
@@ -52,7 +53,11 @@ h2 {
 }
 
 .json-key {
-  color: #1068b3;
+  color: #a4d1f7;
+}
+
+.json-string {
+  color: #fff;
 }
 
 .github-fork-ribbon:before {
@@ -75,16 +80,9 @@ h2 {
   padding: 1rem;
   color: #000;
   border: 1px solid #000;
+  background: #ef9cda;
 }
 
-.new-baby-button::before {
-  background: transparent url("./assets/images/NickCannon.png") center center
-    no-repeat;
-  background-size: contain;
-  border-radius: 50%;
-  content: "";
-  display: inline-block;
-  height: 2rem;
-  margin-inline-end: 1rem;
-  width: 2rem;
+.new-baby-button svg {
+  margin-right: 1rem;
 }

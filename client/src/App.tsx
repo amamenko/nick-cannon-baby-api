@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import prettyHtml from "json-pretty-html";
 import { FaGithub } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { MdRefresh } from "react-icons/md";
 import KofiButton from "kofi-button";
 import "./App.css";
 
@@ -85,7 +86,47 @@ const App = () => {
               Read more
             </span>
           </p>
-          <p className={`paragraph ${showMore ? "" : "hidden"}`}></p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            Nick Cannon is an entertainer, actor, rapper, and comedian known for
+            films such as Drumline (2002) and television shows such as All That
+            and Wild 'n Out.
+          </p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            Cannon's many children with multiple women (often referred to as his
+            "baby mamas") have become a{" "}
+            <a
+              href="https://knowyourmeme.com/memes/nick-cannon-kids"
+              rel="noreferrer noopener"
+              target="_blank"
+              className="pink_link"
+            >
+              meme
+            </a>{" "}
+            referring to jokes about both his reproduction habits and his
+            children's unique names.
+          </p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            Cannon's first children arrived in 2011 with his then-wife Mariah
+            Carey - a pair of twin girls. Memes began to proliferate almost a
+            decade later, when his total baby count grew from four to 11 in just
+            two years.
+          </p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            An early example of a joke referring to his children's names is a
+            tweet posted after his daughter Powerful Queen was born on December
+            25th, 2020. Twitter user DopeBrwnGuy tweeted, "Nick Cannon could’ve
+            named his kid Special Beam Cannon and now I’m pissed off he didn’t."
+          </p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            Another early example can be dated to April 11th, 2021 - this time
+            targeting Nick Cannon's reproduction habits - Twitter user
+            KennyB2324 tweeted a GIF of Thanos, captioning it, "Nick Cannon
+            collecting kids like Infinity Stones…"
+          </p>
+          <p className={`paragraph ${showMore ? "" : "hidden"}`}>
+            The total Nick Cannon baby count stands at 12 as of{" "}
+            {new Date().getFullYear()}.
+          </p>
         </div>
         <h2>Usage</h2>
         <h3>Random Baby</h3>
@@ -104,7 +145,7 @@ const App = () => {
               <div dangerouslySetInnerHTML={{ __html: exampleResponse }} />
             ) : (
               <ClipLoader
-                color={"#000"}
+                color={"#FFF"}
                 loading={exampleResponse ? false : true}
                 size={15}
               />
@@ -117,11 +158,12 @@ const App = () => {
             type="button"
             onClick={getExample}
           >
-            Load a new baby
+            <MdRefresh color="#000" size="25" />
+            <span>Load a new Nick Cannon baby</span>
           </button>
         </div>
         <h4>Multiple Results</h4>
-        <p>Retrieve a specific number of random baby results.</p>
+        <p>Retrieve a specific number of random Nick Cannon baby results.</p>
         <pre>
           <code className="request get">
             <a href={`${currentURL}/babies/random?results=5`}>
@@ -129,43 +171,40 @@ const App = () => {
             </a>
           </code>
         </pre>
-        <h4>Specify year</h4>
-        <p>Retrieve a random baby from a specific year.</p>
-        <pre>
-          <code className="request get">
-            <a href={`${currentURL}/babies/random?year=2011`}>
-              {currentURL}/babies/random?year=2011
-            </a>
-          </code>
-        </pre>
-        <h4>Specify movie</h4>
-        <p>Retrieve a random baby by the name of the movie it appears in.</p>
-        <pre>
-          <code className="request get">
-            <a href={`${currentURL}/babies/random?movie=zoolander`}>
-              {currentURL}/babies/random?movie=zoolander
-            </a>
-          </code>
-        </pre>
-        <h4>Sort multiple results</h4>
+        <h4>Specify gestation date</h4>
         <p>
-          Sort multiple random results by either movie, release_date, year, or
-          director. Sort direction can be either asc (ascending) or desc
-          (descending).
+          Retrieve a random Nick Cannon baby from a date falling between its
+          approximate conception and birth.
         </p>
         <pre>
           <code className="request get">
-            <a
-              href={`${currentURL}/babies/random?results=10&sort=movie&direction=desc`}
-            >
-              {currentURL}/babies/random?results=10&sort=movie&direction=desc
+            <a href={`${currentURL}/babies/random?date=05/01/2022&results=5`}>
+              {currentURL}/babies/random?date=05/01/2022&results=5
+            </a>
+          </code>
+        </pre>
+        <h4>Specify mother</h4>
+        <p>Retrieve a random Nick Cannon baby from a specific mother.</p>
+        <pre>
+          <code className="request get">
+            <a href={`${currentURL}/babies/random?mother=mariah%20carey`}>
+              {currentURL}/babies/random?mother=mariah%20carey
+            </a>
+          </code>
+        </pre>
+        <h4>Specify gender</h4>
+        <p>Retrieve a random Nick Cannon baby of a specific gender.</p>
+        <pre>
+          <code className="request get">
+            <a href={`${currentURL}/babies/random?gender=male`}>
+              {currentURL}/babies/random?gender=male
             </a>
           </code>
         </pre>
         <h3>Ordered Baby</h3>
         <p>
-          Retrieve a specific baby by his or her index in the chronological
-          order of all results.
+          Retrieve a specific Nick Cannon baby by his or her index in the
+          chronological order of all results.
         </p>
         <pre>
           <code className="request get">
@@ -176,14 +215,30 @@ const App = () => {
         </pre>
         <h4>Multiple Ordered Baby Results</h4>
         <p>
-          Retrieve all baby results between a first index and a second index,
-          inclusive, in the chronological order of all results.
+          Retrieve all Nick Cannon babies between a first index and a second
+          index, inclusive, in the chronological order of all results.
         </p>
         <pre>
           <code className="request get">
             <a href={`${currentURL}/babies/ordered/3-7`}>
               {currentURL}/babies/ordered/3-7
             </a>
+          </code>
+        </pre>
+        <h3>All Mothers</h3>
+        <p>Retrieve all names of Nick Cannon's baby mamas.</p>
+        <pre>
+          <code className="request get">
+            <a href={`${currentURL}/babies/mothers`}>
+              {currentURL}/babies/mothers
+            </a>
+          </code>
+        </pre>
+        <h3>All Names</h3>
+        <p>Retrieve all names of Nick Cannon's children.</p>
+        <pre>
+          <code className="request get">
+            <a href={`${currentURL}/babies/names`}>{currentURL}/babies/names</a>
           </code>
         </pre>
         <div className="contact">
@@ -249,7 +304,7 @@ const App = () => {
         <div className="support_container">
           <p>Loving the Nick Cannon Baby API?</p>
           <KofiButton
-            color="#7d7aab"
+            color="#7292ac"
             title="Support Avi on Ko-fi"
             kofiID="E1E3CFTNF"
           />
