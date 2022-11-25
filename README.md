@@ -5,7 +5,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/amamenko/nick-cannon-baby-api">
-   <img src="./client/src/assets/images/NickCannonBabyApiLogo.png" width="450" />
+   <img src="./client/src/assets/images/NickCannonBabyApiLogo.png" width="300" />
   </a>
    
   <h3 align="center">The Nick Cannon Baby API</h3>
