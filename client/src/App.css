@@ -29,7 +29,8 @@ a.pink_link {
 }
 
 .api_logo {
-  max-width: 375px;
+  max-width: 300px;
+  margin: 1.5rem 0 2.5rem 0;
 }
 
 .explanation_paragraphs {
