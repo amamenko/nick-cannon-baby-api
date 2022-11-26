@@ -1,5 +1,5 @@
 # This is an OpenAPI description for the Nick Cannon Baby API.
-# You can view the resulting docs on ReadMe: https://wow.readme.io
+# You can view the resulting docs on ReadMe: https://nick-cannon-baby-api.readme.io
 openapi: 3.0.0
 info:
   version: 1.0.1
