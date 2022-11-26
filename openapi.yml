@@ -2,7 +2,7 @@
 # You can view the resulting docs on ReadMe: https://nick-cannon-baby-api.readme.io
 openapi: 3.0.0
 info:
-  version: 1.0.1
+  version: 1.0
   title: The Nick Cannon Baby API
   license:
     name: MIT
