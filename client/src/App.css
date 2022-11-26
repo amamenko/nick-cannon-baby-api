@@ -68,6 +68,11 @@ a.pink_link {
   justify-content: center;
 }
 
+.other_projects {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .bottom_icons {
   display: flex;
   align-items: center;

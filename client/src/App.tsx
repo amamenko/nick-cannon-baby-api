@@ -61,7 +61,7 @@ const App = () => {
               </a>
             </b>{" "}
             is a free JSON API for entertainer Nick Cannon's many children and
-            associated baby mamas.
+            baby mamas.
             <br />
             <br />
             <a
@@ -308,6 +308,17 @@ const App = () => {
             title="Support Avi on Ko-fi"
             kofiID="E1E3CFTNF"
           />
+          <p className="other_projects">
+            Check out Avi's other project:
+            <br />{" "}
+            <a
+              href="https://owen-wilson-wow-api.onrender.com/"
+              rel="noopener noreferrer"
+              className="pink_link"
+            >
+              The Owen Wilson Wow API
+            </a>
+          </p>
         </div>
         <div className="bottom_icons">
           <a
