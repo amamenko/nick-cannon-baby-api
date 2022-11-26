@@ -17,7 +17,7 @@
     <br />
   </p>
    <p align="center">API Link: <a href="https://nick-cannon-baby-api.onrender.com/">https://nick-cannon-baby-api.onrender.com</a></p>
-   <p align="center">API Documentation: <a href="https://baby.readme.io">https://baby.readme.io</a></p>
+   <p align="center">API Documentation: <a href="https://nick-cannon-baby-api.readme.io">https://nick-cannon-baby-api.readme.io</a></p>
 </p>
 
 # Usage
@@ -55,7 +55,7 @@ Retrieve a random Nick Cannon baby in JSON format - [https://nick-cannon-baby-ap
 
 ### Multiple Results
 
-Retrieve a specific number of random Nick Cannon baby results - [https://nick-cannon-baby-api.onrender.com/babies/random?results=5](nick-cannon-baby-api.onrender.com/babies/random?results=5)
+Retrieve a specific number of random Nick Cannon baby results - [https://nick-cannon-baby-api.onrender.com/babies/random?results=5](https://nick-cannon-baby-api.onrender.com/babies/random?results=5)
 
 <b>Example Response:</b>
 
@@ -148,7 +148,7 @@ Avraham (Avi) Mamenko - avimamenko@gmail.com
 
 API Link: [https://nick-cannon-baby-api.onrender.com/](https://nick-cannon-baby-api.onrender.com/)
 
-API Documentation: [https://baby.readme.io](https://baby.readme.io)
+API Documentation: [https://nick-cannon-baby-api.readme.io](https://nick-cannon-baby-api.readme.io)
 
 # Disclaimer
 

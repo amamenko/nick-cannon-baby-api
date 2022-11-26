@@ -1,0 +1,191 @@
+# This is an OpenAPI description for the Nick Cannon Baby API.
+# You can view the resulting docs on ReadMe: https://wow.readme.io
+openapi: 3.0.0
+info:
+  version: 1.0.1
+  title: The Nick Cannon Baby API
+  license:
+    name: MIT
+servers:
+  - url: https://nick-cannon-baby-api.onrender.com/babies
+paths:
+  /random:
+    get:
+      summary: Random Baby
+      description: Retrieve a random Nick Cannon baby in JSON format.
+      operationId: random
+      tags:
+        - baby
+      parameters:
+        - name: results
+          in: query
+          description: Retrieve a specific number of random Nick Cannon baby results.
+          required: false
+          example: 5
+          schema:
+            type: integer
+        - name: date
+          in: query
+          description: Retrieve a random Nick Cannon baby from a date falling between its approximate conception and birth.
+          required: false
+          example: 05/11/2022
+          schema:
+            type: string
+        - name: mother
+          in: query
+          description: Retrieve a random Nick Cannon baby from a specific mother.
+          required: false
+          example: mariah carey
+          schema:
+            type: string
+        - name: gender
+          in: query
+          description: Retrieve a random Nick Cannon baby of a specific gender.
+          required: false
+          example: male
+          schema:
+            type: string
+      responses:
+        "200":
+          description: An array of Nick Cannon babies
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Babies"
+  /ordered/{index}:
+    get:
+      summary: Ordered Baby
+      description: Retrieve a specific Nick Cannon baby by his or her index in the chronological order of all results.
+      operationId: ordered
+      tags:
+        - baby
+      parameters:
+        - name: index
+          in: path
+          description: Index within results array. Either a single index or a range. Range is between a first index and a second index, inclusive.
+          required: true
+          examples:
+            single:
+              value: 0
+            range:
+              value: 3-7
+          schema:
+            type: string
+      responses:
+        "200":
+          description: An array of Nick Cannon babies
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Babies"
+        "400":
+          description: Bad Request
+          content:
+            text/html:
+              schema:
+                type: string
+              examples:
+                response:
+                  summary: Invalid index input
+                  value: "400 Bad Request: Index should be a number or a range between two numbers"
+  /mothers:
+    get:
+      summary: All Mothers
+      description: Retrieve all names of Nick Cannon's baby mamas.
+      operationId: mothers
+      tags:
+        - metadata
+      responses:
+        "200":
+          description: An array of Nick Cannon baby mama names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: Mariah Carey
+  /names:
+    get:
+      summary: All Names
+      description: Retrieve all names of Nick Cannon's children.
+      operationId: names
+      tags:
+        - metadata
+      responses:
+        "200":
+          description: An array of Nick Cannon baby names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: Legendary Love Cannon
+
+components:
+  schemas:
+    Baby:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Monroe Cannon
+        birthday:
+          type: string
+          format: date
+          pattern: /([0-9]{2})\/(?:[0-9]{2})\/([0-9]{4})/
+          example: 04/30/2011
+        gender:
+          type: string
+          example: male
+        twin:
+          type: boolean
+          example: true
+        approximate_conception_date:
+          type: string
+          format: date
+          pattern: /([0-9]{2})\/(?:[0-9]{2})\/([0-9]{4})/
+          example: 08/07/2010
+        mother:
+          type: string
+          example: Mariah Carey
+        mother_age_at_birth:
+          type: integer
+          example: 41
+        nick_cannon_age_at_birth:
+          type: integer
+          example: 30
+        current_child_with_mother:
+          type: integer
+          example: 1
+        total_children_with_mother:
+          type: integer
+          example: 2
+        status:
+          type: object
+          properties:
+            alive:
+              type: boolean
+              example: true
+            date_of_passing:
+              type: string
+              format: date
+              pattern: /([0-9]{2})\/(?:[0-9]{2})\/([0-9]{4})/
+              example: 12/05/2021
+            age:
+              type: object
+              properties:
+                years:
+                  type: integer
+                  example: 11
+                months:
+                  type: integer
+                  example: 6
+                days:
+                  type: integer
+                  example: 26
+    Babies:
+      type: array
+      items:
+        $ref: "#/components/schemas/Baby"

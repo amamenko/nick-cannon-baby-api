@@ -65,7 +65,7 @@ const App = () => {
             <br />
             <br />
             <a
-              href="https://baby.readme.io"
+              href="https://nick-cannon-baby-api.readme.io"
               rel="noreferrer noopener"
               className="pink_link"
             >
